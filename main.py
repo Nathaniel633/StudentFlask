@@ -45,6 +45,10 @@ def index():
 def table():
     return render_template("table.html")
 
+@app.route('/login/')  # login system
+def login():
+    return render_template("userlogin.html")
+
 @app.before_request
 def before_request():
     # Check if the request came from a specific origin

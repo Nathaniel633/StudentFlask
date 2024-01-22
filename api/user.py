@@ -13,7 +13,7 @@ user_api = Blueprint('user_api', __name__,
 api = Api(user_api)
 
 class UserAPI:        
-    class _CRUD(Resource):  # User API operation for Create, Read.  THe Update, Delete methods need to be implemeented
+    class _CRUD(Resource):  # User API operation for Create, Read.  THe Update, Delete methods need to be implented
         @token_required
         def post(self, current_user): # Create method
             ''' Read data for json body '''
