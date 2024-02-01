@@ -212,7 +212,7 @@ class User(db.Model):
 """Database Creation and Testing """
 
 
-# Builds working data for testing
+# Builds working data for testing (initialization)
 def initUsers():
     with app.app_context():
         """Create database and tables"""
@@ -222,7 +222,8 @@ def initUsers():
         u2 = User(name='Nicholas Tesla', uid='niko', password='123niko', dob=date(1856, 7, 10)) 
         u3 = User(name='Alexander Graham Bell', uid='lex')
         u4 = User(name='Grace Hopper', uid='hop', password='123hop', dob=date(1906, 12, 9))
-        users = [u1, u2, u3, u4]
+        u5 = User(name='Nathan Obodovski', uid='nate', password='123nate', dob=date(2007, 10, 19), email='nathanieldot0@gmail.com')
+        users = [u1, u2, u3, u4, u5]
 
         """Builds sample user/note(s) data"""
         for user in users:
