@@ -14,7 +14,6 @@ api = Api(user_api)
 
 class UserAPI:        
     class _CRUD(Resource):  # User API operation for Create, Read.  The Update, Delete methods need to be implented
-        @token_required
         def post(self): # Create method
             ''' Read data for json body '''
             body = request.get_json()
